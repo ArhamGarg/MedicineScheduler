@@ -1,5 +1,6 @@
 var form;
 var user;
+var allUsers
 var database;
 var userCount = 0;
 
@@ -9,10 +10,10 @@ function setup() {
 
   form = new Form()
   user = new User();
+  user.getUserCount();
   form.display();
 }
 
-function draw() {
-  background(255,255,255);  
-  drawSprites();
+function draw(){
+  
 }
