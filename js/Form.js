@@ -2,6 +2,7 @@ class Form{
     constructor(){
         this.title = createElement('h2')
         this.name = createInput('Name');
+        this.email = createInput('Email');
         this.age = createInput('Age');
         this.illness = createInput('Prevailing Illness');
         this.submit = createButton('Submit');
@@ -38,6 +39,7 @@ class Form{
     hide(){
         this.title.hide();
         this.name.hide();
+        this.email.hide();
         this.age.hide();
         this.illness.hide();
         this.submit.hide();
@@ -67,17 +69,20 @@ class Form{
         this.title.position(displayWidth/2 - 88.75, 50);
         this.title.style('color: orange')
         this.name.position(displayWidth/2 - 75, 100);
-        this.age.position(displayWidth/2 - 75, 150); 
-        this.illness.position(displayWidth/2 - 75, 200);
-        this.submit.position(displayWidth/2 - 15, 250);
+        this.email.position(displayWidth/2 - 75, 150);
+        this.age.position(displayWidth/2 - 75, 200); 
+        this.illness.position(displayWidth/2 - 75, 250);
+        this.submit.position(displayWidth/2 - 15, 300);
         
         this.submit.mousePressed(()=>{
             this.title.hide();
             this.name.hide();
+            this.email.hide();
             this.age.hide();
             this.illness.hide();
             this.submit.hide();
             user.name = this.name.value();
+            user.email = this.email.value();
             user.age = this.age.value();
             user.illness = this.illness.value();
             userCount += 1;

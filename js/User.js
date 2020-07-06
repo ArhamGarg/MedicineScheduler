@@ -1,6 +1,7 @@
 class User{
     constructor(){
         this.name = null;
+        this.email = null;
         this.age = null;
         this.illness = null;
         this.index = 0;
@@ -31,6 +32,7 @@ class User{
         var userIndex = "users/user" + this.index;
         database.ref(userIndex).set({
             name: this.name,
+            email: this.email,
             age: this.age,
             illness: this.illness,
             medicine1: this.b1,
